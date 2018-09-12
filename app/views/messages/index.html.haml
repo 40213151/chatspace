@@ -1,0 +1,19 @@
+.wrapper
+  = render 'devise/shared/side_bar'
+.chat-main
+  .chat-main__header
+    .chat-main__header--group.clearfix
+      .chat-main__header--group-name てすとルーム
+      %a{:class => 'hat-main__header--group-edit-btn' , :href => "/groups/1160/edit" }edit
+    .chat-main__header-members MEMBER:だいまる
+  .chat-main__body
+    .chat-main__body--messages-list
+      = render @messages
+  .chat-main__footer
+    = form_for [@group, @message], :html => {:class => "chat-main__footer-body"} do |f|
+      = f.text_field :content, class: 'message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'chat-file' do
+          = fa_icon 'picture-o', class: 'fa'
+          = f.file_field :image, class: 'image'
+        = f.submit 'Send', class: 'submit'

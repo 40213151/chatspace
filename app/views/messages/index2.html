@@ -1,0 +1,94 @@
+<div class='notification'>
+  <div class="notice">メッセージ送信成功</div>
+</div>
+
+<div class='chat-side'>
+  <div class='chat-side__user'>
+    <div class='chat-side__user-content'>
+      <div class='chat-side__user-name'>
+        だいまるま
+      </div>
+      <a class="chat-side__user--new-group" href="/groups/new">
+        <i class='fa fa-pencil-square-o'></i>
+      </a>
+      <a class="chat-side__user--edit-user" href="/users/edit">
+        <i class='fa fa-cog'></i>
+      </a>
+    </div>
+  </div>
+
+  <div class='chat-side__groups'>
+    <div class='chat-side__groups-list'>
+      <a href="/groups/1160/messages">
+        <div class='chat-side__group'>
+          <div class='chat-side__group-name'>
+            てすとルーム
+          </div>
+          <div class='chat-side__group-message'>
+            おいっっっっ
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class='chat-main'>
+  <div class='chat-main__header'>
+    <div class='chat-main__header--group clearfix'>
+      <div class='chat-main__header--group-name'>
+        てすとルーム
+      </div>
+      <a class="chat-main__header--group-edit-btn" href="/groups/1160/edit">edit
+      </a>
+    </div>
+    <div class='chat-main__header-members'>
+      MEMBER:
+      <i>
+        だいまるま
+      </i>
+    </div>
+  </div>
+  <div class='chat-main__body'>
+    <div class='chat-main__body--messages-list'>
+      <div class='chat-main__message clearfix' data-id='1949'>
+        <div class='chat-main__message-name'>
+          だいまるま
+        </div>
+        <div class='chat-main__message-time'>
+          2018/07/21 16:14:58
+        </div>
+        <div class='chat-main__message-body'>
+          おいっっっっ
+          <img class="chat-main__message-body-image" src="" />
+        </div>
+      </div>
+      <div class='chat-main__message clearfix' data-id='1948'>
+        <div class='chat-main__message-name'>
+          だいまるま
+        </div>
+        <div class='chat-main__message-time'>
+          2018/07/21 16:14:48
+        </div>
+        <div class='chat-main__message-body'>
+          ああああああ
+          <img class="chat-main__message-body-image" src="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='chat-main__footer'>
+    <form class="chat-main__footer-form" id="new_message" enctype="multipart/form-data" action="/groups/1160/messages" accept-charset="UTF-8" method="post">
+      <input name="utf8" type="hidden" value="&#x2713;" />
+      <input type="hidden" name="authenticity_token" value="sfAeI6wnozFdbbt/o4XuJBr6cG7XnVKMQvuM+wLdfdzmECnN9LaJ1zJz57UDs8vqdsuU1c37SpYy5aiKEHLD0Q==" />
+      <div class='chat-main__footer-body'>
+        <input placeholder="type a message" class="message" type="text" name="message[body]" id="message_body" />
+        <label class="chat-file" for="message_image">
+          <input class="image" type="file" name="message[image]" id="message_image" />
+          <i class='fa fa-image'></i>
+        </label>
+      </div>
+      <input type="submit" name="commit" value="Send" class="submit" data-disable-with="Send" />
+    </form>
+  </div>
+</div>
